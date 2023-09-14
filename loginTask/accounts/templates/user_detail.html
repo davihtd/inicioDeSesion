@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h2>Pagina de detalles de usuario</h2>
+<section>
+  <ul>
+    <li>Nombre de usuario: {{ user.username }}</li>
+    <li>Correo Electronico: {{ user.email }}</li>
+    <li>Edad: {{ user.age }}</li>
+  </ul>
+  <a href="{% url 'account:user_update' user.id %}">Editar</a>
+  <a href="{% url 'account:password_change' %}">Cambiar Contraseña</a>
+</section>
+{% endblock %}
